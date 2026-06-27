@@ -1,31 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <title>Smart TV</title>
-    <link rel="stylesheet" href="style.css">
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SmartTV OS</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
-<header>
-    <h1>SMART TV</h1>
-</header>
+<div id="topBar">
 
-<nav>
-    <button onclick="goHome()">Home</button>
-    <button onclick="openYouTube()">YouTube</button>
-    <button onclick="openKosmi()">Kosmi</button>
-    <button onclick="showFavorites()">Favorites</button>
-</nav>
+<div id="logo">
 
-<main>
-    <div id="content">
-        <h2>Welcome</h2>
-        <p>Select a service from the menu.</p>
-    </div>
-</main>
+SMART TV
+
+</div>
+
+<div id="search">
+
+<input
+type="text"
+id="searchBox"
+placeholder="Search Movies..."
+>
+
+</div>
+
+</div>
+
+<div id="hero">
+
+<div id="heroOverlay">
+
+<h1>Featured Movie</h1>
+
+<p>
+Welcome to your Smart TV
+</p>
+
+<button onclick="loadMovies()">
+
+Browse Library
+
+</button>
+
+</div>
+
+</div>
+
+<div id="menu">
+
+<button onclick="goHome()">
+
+🏠 Home
+
+</button>
+
+<button onclick="loadMovies()">
+
+🎬 Movies
+
+</button>
+
+<button onclick="openYouTube()">
+
+📺 YouTube
+
+</button>
+
+<button onclick="openKosmi()">
+
+👥 Kosmi
+
+</button>
+
+<button onclick="showFavorites()">
+
+⭐ Favorites
+
+</button>
+
+</div>
+
+<div id="content">
+
+</div>
 
 <script src="app.js"></script>
 
 </body>
+
 </html>
