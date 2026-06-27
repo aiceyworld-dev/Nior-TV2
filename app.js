@@ -1,54 +1,79 @@
-// ======================================
-// SmartTV App v1.0
-// ======================================
+// ========================================
+// Smart TV v2.0
+// Loads Movies From movies.json
+// ========================================
 
 const content = document.getElementById("content");
 
-function goHome()
+async function loadMovies()
 {
-    content.innerHTML = `
-        <h2>Welcome to Smart TV</h2>
+    const response = await fetch("movies.json");
+    const movies = await response.json();
+
+    let html = `
+        <h2>Movie Library</h2>
 
         <div class="movieGrid">
+    `;
 
-            <div class="movieCard">
-                <div class="movieTitle">📺 YouTube</div>
+    movies.forEach(movie => {
+
+        html += `
+
+        <div class="movieCard">
+
+            <img
+            class="moviePoster"
+            src="${movie.poster}"
+            />
+
+            <div class="movieTitle">
+
+                ${movie.title}
+
             </div>
 
-            <div class="movieCard">
-                <div class="movieTitle">🎬 Movies</div>
+            <div style="padding:10px;">
+
+                ${movie.category}
+
             </div>
 
-            <div class="movieCard">
-                <div class="movieTitle">📡 Kosmi</div>
-            </div>
+            <button onclick="watchMovie('${movie.url}')">
 
-            <div class="movieCard">
-                <div class="movieTitle">⭐ Favorites</div>
-            </div>
+                Watch
+
+            </button>
 
         </div>
-    `;
+
+        `;
+
+    });
+
+    html += "</div>";
+
+    content.innerHTML = html;
+}
+
+function watchMovie(url)
+{
+    window.location.href = url;
+}
+
+function goHome()
+{
+    loadMovies();
 }
 
 function openYouTube()
 {
-    window.location.href = "https://www.youtube.com/";
+    window.location.href = "https://www.youtube.com";
 }
 
 function openKosmi()
 {
-    window.location.href = "https://kosmi.io/";
-}
-
-function showFavorites()
-{
-    content.innerHTML =
-    `
-    <h2>Favorites</h2>
-
-    <p>No favorites yet.</p>
-    `;
+    window.location.href = "https://kosmi.io";
 }
 
 window.onload = function()
