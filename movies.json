@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Big Buck Bunny",
+    "category": "Animation",
+    "description": "Open movie licensed under Creative Commons.",
+    "poster": "https://peach.blender.org/wp-content/uploads/title_anouncement.jpg",
+    "url": "https://www.youtube.com/results?search_query=Big+Buck+Bunny"
+  },
+  {
+    "title": "Sintel",
+    "category": "Fantasy",
+    "description": "Open movie created by the Blender Foundation.",
+    "poster": "https://download.blender.org/durian/trailer/sintel_trailer-480p.jpg",
+    "url": "https://www.youtube.com/results?search_query=Sintel+Blender"
+  },
+  {
+    "title": "Tears of Steel",
+    "category": "Sci-Fi",
+    "description": "Open science fiction film.",
+    "poster": "https://mango.blender.org/wp-content/themes/mango/images/project_files.jpg",
+    "url": "https://www.youtube.com/results?search_query=Tears+of+Steel"
+  }
+]
